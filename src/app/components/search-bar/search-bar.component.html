@@ -1,0 +1,19 @@
+<mat-toolbar class="header-toolbar">
+    <div class="logo">
+      <a routerLink="/"><img id="logo" src="../../../assets/tuneLingualLogo.png" alt="TuneLingual Logo" /></a>
+    </div>
+    <div class="search">
+      <input
+      type="search"
+      placeholder="Need music?"
+      [(ngModel)]="query"
+      (keyup.enter)="sendSearch()"
+      onfocus="this.value=''"
+    />
+    </div>
+    <div class="profile">
+      <a routerLink="/profile">
+        <img id="profile-pic" src="{{user?.image}}" />
+      </a>
+    </div>
+  </mat-toolbar>

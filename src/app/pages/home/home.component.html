@@ -1,0 +1,34 @@
+<div class="userTracks">
+    <h3>Top Tracks</h3>
+    <div class="grid-container">
+      @for (tracks of usersTopTracks; track $index)
+      {
+        <div class="grid-item">
+          <app-music-card
+            [trackID]="tracks.id"
+            [trackName]="tracks.name"
+            [trackImage]="tracks.image"
+            [trackArtist]="tracks.artist"
+            [isrc]="tracks.isrc">
+          </app-music-card>
+        </div>
+      }
+    </div>
+  </div>
+  
+  <div class="topArtists">
+    <h3>Top Artists</h3>
+    <div class="grid-container">
+      @for (artist of usersTopArtists; track $index)
+      {
+        <div class="grid-item">
+          <app-artist-card
+            [artistName]="artist.name"
+            [artistImage]="artist.image"
+            [artistGenre]="artist.genre"
+            [artistID]="artist.id">
+          </app-artist-card>
+        </div>
+      }
+    </div>
+  </div>

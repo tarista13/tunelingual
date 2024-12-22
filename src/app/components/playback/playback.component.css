@@ -1,0 +1,49 @@
+mat-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 100%;
+    position: relative;
+    background-color: #101C39;
+    color: white;
+}
+
+.middle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.songPlaying {
+    flex: 0;
+    text-align: left;
+}
+
+.volume {
+    flex: 0;
+    text-align: right;
+}
+
+.playbackButtons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f9;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
